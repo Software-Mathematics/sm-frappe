@@ -1,24 +1,30 @@
 frappe.provide("frappe.ui.misc");
 frappe.ui.misc.about = function () {
 	if (!frappe.ui.misc.about_dialog) {
-		var d = new frappe.ui.Dialog({ title: __("Frappe Framework") });
+		var d = new frappe.ui.Dialog({ title: __("Software Mathematics") }); //changed to 'Software mathematics' Line4
 
 		$(d.body).html(
-			repl(
+			repl( 
+				//changed to 'Applications of Software Mathematics' Line9
+				//replaced website: https://frappeframework.com with  https://softwaremathematics.com  Line16
+				//replaced source: https://github.com/frappe with  https://github.com/Software-Mathematics Line19
+				//replaced linkedin: https://linkedin.com/company/frappe-tech with https://www.linkedin.com/company/softwaremathematics Line23
+				//replaced twitter: https://twitter.com/frappetech with https://twitter.com/softwaremathem1 Line25
+				//replaced 'Frappe Technologies Pvt. Ltd. and contributors' with '© Software Mathematics Pvt. Ltd.' Line39 
 				`<div>
-					<p>${__("Open Source Applications for the Web")}</p>
+					<p>${__("Applications of Software Mathematics")}</p> 
 					<p><i class='fa fa-globe fa-fw'></i>
 						${__("Website")}:
-						<a href='https://frappeframework.com' target='_blank'>https://frappeframework.com</a></p>
+						<a href=' https://softwaremathematics.com ' target='_blank'> https://softwaremathematics.com </a></p> 
 					<p><i class='fa fa-github fa-fw'></i>
 						${__("Source")}:
-						<a href='https://github.com/frappe' target='_blank'>https://github.com/frappe</a></p>
+						<a href=' https://github.com/Software-Mathematics' target='_blank'> https://github.com/Software-Mathematics</a></p>
 					<p><i class='fa fa-graduation-cap fa-fw'></i>
 						Frappe School: <a href='https://frappe.school' target='_blank'>https://frappe.school</a></p>
 					<p><i class='fa fa-linkedin fa-fw'></i>
-						Linkedin: <a href='https://linkedin.com/company/frappe-tech' target='_blank'>https://linkedin.com/company/frappe-tech</a></p>
+						Linkedin: <a href='https://www.linkedin.com/company/softwaremathematics' target='_blank'>https://www.linkedin.com/company/softwaremathematics</a></p>
 					<p><i class='fa fa-twitter fa-fw'></i>
-						Twitter: <a href='https://twitter.com/frappetech' target='_blank'>https://twitter.com/frappetech</a></p>
+						Twitter: <a href='https://twitter.com/softwaremathem1' target='_blank'>https://twitter.com/softwaremathem1</a></p>
 					<p><i class='fa fa-youtube fa-fw'></i>
 						YouTube: <a href='https://www.youtube.com/@frappetech' target='_blank'>https://www.youtube.com/@frappetech</a></p>
 					<hr>
@@ -32,13 +38,13 @@ frappe.ui.misc.about = function () {
 						</b>
 					</p>
 					<hr>
-					<p class='text-muted'>${__("&copy; Frappe Technologies Pvt. Ltd. and contributors")} </p>
+					<p class='text-muted'>${__("&copy; © Software Mathematics Pvt. Ltd.")} </p>
 					</div>`,
 				frappe.app
 			)
 		);
 
-		frappe.ui.misc.about_dialog = d;
+		frappe.ui.misc.about_dialog = d; 
 
 		frappe.ui.misc.about_dialog.on_page_show = function () {
 			if (!frappe.versions) {
